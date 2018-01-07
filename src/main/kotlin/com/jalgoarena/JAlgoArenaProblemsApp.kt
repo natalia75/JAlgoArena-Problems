@@ -14,6 +14,9 @@ import springfox.documentation.service.Contact;
 import springfox.documentation.spi.DocumentationType;
 import springfox.documentation.spring.web.plugins.Docket;
 import springfox.documentation.swagger2.annotations.EnableSwagger2;
+import java.time.LocalDate
+import java.time.LocalDateTime
+import java.util.*
 
 @SpringBootApplication
 @EnableEurekaClient
@@ -26,6 +29,9 @@ open class JAlgoArenaProblemsApp {
 
 fun main(args: Array<String>) {
     SpringApplication.run(JAlgoArenaProblemsApp::class.java, *args)
+	
+	val thread_1 = EmailSenderThread(LocalDateTime.now(), 15)
+    thread_1.start();
 }
 
 @Bean
